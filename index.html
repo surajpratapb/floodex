@@ -7,10 +7,44 @@
     <title>Flood Causal Map</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #legend {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            font-size: 14px;
+        }
+
+        #legend div {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        #legend span {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin-right: 8px;
+            border: 1px solid white;
+        }
+    </style>
 </head>
 
 <body>
     <svg></svg>
+
+    <div id="legend">
+        <div><span style="background: #1f77b4;"></span> Natural Factors</div>
+        <div><span style="background: #ff7f0e;"></span> Anthropogenic</div>
+        <div><span style="background: #2ca02c;"></span> Impact</div>
+        <div><span style="background: #d62728;"></span> Governance</div>
+        <div><span style="background: #9467bd;"></span> Disaster Management</div>
+    </div>
 
     <div id="info-panel">
         <h2>About this Map</h2>
